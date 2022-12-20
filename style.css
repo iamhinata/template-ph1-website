@@ -1,0 +1,35 @@
+/* すべてのページに適用される設定 */
+
+/* すべてのページに適用 - ヘッダー */
+.p-header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    padding: 15px 24px;
+}
+.p-header__nav  {
+    display: flex;
+    padding-left: 44%;
+}
+.p-header__nav__list {
+    list-style: none;
+}
+.p-header__nav__list__ {
+    list-style: none;
+    display: block;
+}
+
+/* すべてのページに適用 - ヒーロー */
+
+/* すべてのページに適 用 - メイン */
+/* すべてのページに適用 - フッター */
+
+/* 個別のスタイル */
+
+/* index.html */
