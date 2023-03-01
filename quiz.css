@@ -2,6 +2,12 @@
 .l-main {
     padding-top: 100px;
 }
+::after {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
 /* すべてのページに適用 - ヘッダー */
 .p-header {
     left: 0;
@@ -42,106 +48,259 @@
     font-size: 14px;
     letter-spacing: 0.1em;
 }
+
 /* すべてのページに適用 - ヒーロー */
-.p-top-hero__inner {
-    display: flex;
-    margin: 0 auto;
-    max-width: 1280px;
-    position: relative;
+.p-quiz-hero {
+    background: url(./assets/img/quiz/bg-hero.jpg) center center/cover;
 }
-.p-top-hero__body {
-    background-color: #eff2f5;
-    position: relative;
-    border-radius: 20px;
-    display: inline-block;
-    padding: 20px 11px 20px 24px;
-    align-self: center;
-    white-space: nowrap;
+
+
+
+.p-quiz-box:not(:first-of-type) {
+    margin-top: 80px;
 }
-.p-top-hero__body__catchcopy {
-    display: inline-block;
-    font-size: 28px;
+
+.p-hero {
+    padding: 60px 16px 32px;
+    padding: 110px 0 76px;
+}
+
+.p-hero__title {
+    color: #fff;
     font-weight: bold;
-    line-height: 1.5;
-    margin-top: 6px;
+    font-size: 18px;
 }
-.p-top-hero__body__title {
-    color: #0071bc;
-    font-size: 12px;
-    font-weight: bold;
+
+.p-hero__title__label {
+    font-size: 14px;
     line-height: 1.8;
 }
-.p-top-hero__scroll{
-    align-items: center;
-    bottom: 24px;
-    display: inline-flex;
-    position: absolute;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
 
-}
-
-
-
-.p-top-hero__image {
+.p-hero__title__inline {
     display: block;
-    overflow: hidden;
-    border-radius: 80px 0 0 80px;
-    margin-left: -125px;
-    /* margin-right: calc(50% - 50vw); */
-    max-height: 680px;
+    font-size: 28px;
+    line-height: 1.5;
+    font-size: 60px;
+    margin-top: 12px;
 }
 
-.p-top-hero__image img{
-    -o-object-fit: cover;
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    width: 100%; 
-}
 
 /* すべてのページに適用 - メイン */
+.p-quiz-container {
+    margin-top: 48px;
+}
 
-.p-top-about__body {
-    display: grid;
-    align-items:center;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 22px;
-}
-.p-top-about__image {
-    border-radius: 16px;
-    overflow: hidden;
-}
-.p-top-about__image img{
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 16px;
     width: 100%;
 }
-.p-top-about__content {
-    font-size: 14px;
-    line-height: 1.8;
+
+/*q*/
+.p-quiz-box__question__image {
+    margin: 24px auto 0;
+    max-width: 718px;
 }
-.p-heading {
-    font-size: 24px;
+
+.p-quiz-box__question__image {
+    margin-top: 64px;
+}
+
+.p-quiz-box__question__title__text {
+    display: block;
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.8;
-    text-align: center;
+    margin-top: 16px;
 }
 
-.p-heading.-light {
-color: #fff;
+.p-quiz-box__question__title__text {
+    font-size: 36px;
+    line-height: 1.5;
+    margin-top: 24px;
 }
 
-.p-heading__caption {
-    color: #0071bc;
-    display: block;
+.p-quiz-box__label {
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+
+.p-quiz-box__label--accent {
+    background-color: #e34e70;
+}
+
+.p-quiz-box__label {
+    font-size: 36px;
+}
+
+.p-quiz-box:not(:first-of-type) {
+    margin-top: 120px;
+}
+
+.p-quiz-box__answer {
+    margin-top: 32px;
+}
+
+.p-quiz-box__answer__list {
+    display: -ms-grid;
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+    padding-left: 0;
+}
+.p-quiz-box__answer__item {
+    list-style: none;
+}
+
+.p-quiz-box__answer__list {
+    -ms-grid-columns: (1fr)[3];
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.p-quiz-box__answer__button {
+    align-items: center;
+    border: solid 4px #eee;
+    border-radius: 8px;
+    display: flex;
     font-size: 14px;
-    letter-spacing: initial;
+    font-weight: bold;
     line-height: 1.8;
-    margin-top: 4px;
+    padding: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.p-quiz-box__answer__button .u-icon__arrow {
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.p-quiz-box__answer__button:disabled .u-icon__arrow {
+    display: none;
+}
+
+.p-quiz-box__answer__button.is-selected {
+    background-color: #eff2f5;
+    border-color: #0071bc;
+}
+
+.p-quiz-box__answer__button.is-selected .u-icon__arrow {
+    display: none;
+}
+
+.p-quiz-box__answer__button {
+    border-width: 5px;
+    font-size: 18px;
+    padding: 19px;
+}
+
+.p-quiz-box__answer__button .u-icon__arrow {
+    font-size: 16px;
+}
+
+.p-quiz-box__answer__correct {
+    background-color: #fff2f5;
+    border-radius: 8px;
+    display: none;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+
+.p-quiz-box__answer__correct.is-correct {
+    display: block;
+}
+
+.p-quiz-box__answer__correct.is-incorrect {
+    background-color: #eff2f5;
+    display: block;
+}
+
+.p-quiz-box__answer__correct__title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+
+.is-correct .p-quiz-box__answer__correct__title {
+    color: #e34e70;
+}
+
+.is-incorrect .p-quiz-box__answer__correct__title {
+    color: #0071bc;
+}
+
+.p-quiz-box__answer__correct__content {
+    align-items: baseline;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+
+.p-quiz-box__answer__correct__content__label {
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;
 }
 
 
-/*ライン*/
+.u-icon__link:before {
+    content: "\e901";
+}
+
+.u-icon__note:before {
+    content: "\e902";
+}
+
+.u-icon__arrow:before {
+    content: "\e903";
+}
+
+.u-icon__line:before {
+    background: radial-gradient(#fff 60%, transparent 60%);
+    color: #00c300;
+    content: "\e900";
+}
+
+.u-icon__instagram:before {
+    content: "\ea92";
+}
+
+.u-icon__twitter:before {
+    content: "\ea96";
+}
+.p-quiz-box__note {
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    display: block;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    gap: 16px;
+    line-height: 1.8;
+    margin-top: 16px;
+    padding: 24px;
+}
+/*擬似要素がわからない聞く*/
+.u-icon__note {
+    font-family: "posse-icon" !important;
+}
+
+
+/* すべてのページに適用 - ライン */
 .p-line {
     max-width: 1000px;
     margin: auto;
@@ -214,7 +373,6 @@ color: #fff;
     right: 5px;
     top: 50%;
     transform: translate(0, -50%);
-    gap: 30px;
 }
 .p-line__footer {
 margin-top: 24px;
@@ -240,14 +398,15 @@ text-align: center;
     right: 20px;
     top: 50%;
     transform: translate(0, -50%);
-    text-decoration: none;
 }
 
 
 
 
 
+
 /* すべてのページに適用 - フッター */
+
 .p-fixedLine {
     bottom: 16px;
     position: fixed;
@@ -261,7 +420,6 @@ text-align: center;
     border-radius: 16px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
     padding: 22px 20px 22px 24px;
-    
 }
 
 .p-fixedLine__link .u-icon__line {
@@ -383,12 +541,11 @@ font-size: 18px;
 .p-sns__list{
     padding-left: 0;
 }
-
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
-/* 個別のスタイル */
+
 
 /* index.html */
